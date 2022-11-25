@@ -1,0 +1,14 @@
+.mainFooter {
+    display: flex; 
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.paragraphFooter {
+
+    color : white;
+
+}

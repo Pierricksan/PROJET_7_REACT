@@ -11,19 +11,22 @@ import Footer from "./components/Layout/Footer/Footer";
 
 // Composant import
 import { Routes, Route } from "react-router-dom";
+import { Fragment } from "react"
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <Fragment>
+    <Header/>
+    <div className="App">  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/logement/:id" element={<FicheLogement />} />
         <Route path="/propos" element={<Propos />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
-      <Footer />
     </div>
+    <Footer/>
+    </Fragment>
   );
 }
 

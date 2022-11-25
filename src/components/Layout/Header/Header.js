@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.css'
 import LOGO from '../imagesLayout/LOGO.svg'
 import {Fragment} from 'react'
 import { Link } from 'react-router-dom';
