@@ -2,21 +2,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(230, 27, 27);
- 
+  width : 75%;
+  margin: 30px auto;
 }
 
 nav {
-  width: 300px;
+  width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 
 a {
-  width : 100px;
+  width : 200px;
+  display: flex;
+  justify-content: flex-end;
   text-decoration: none;
   color: #ff6060;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 a:hover {

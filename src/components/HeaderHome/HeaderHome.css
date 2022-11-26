@@ -1,0 +1,29 @@
+.HeaderHome{
+    
+}
+
+.containerImgHeader{
+    position: relative;
+}
+
+.HeaderHomeText{
+    position : absolute;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    top: 40%;
+    width: 100%;
+}
+
+.containerImgHeader img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 25px;
+    filter : brightness(75%);
+}
+
+.HeaderHomeText h1 {
+    font-weight: 500;   
+    margin: 0;
+}
