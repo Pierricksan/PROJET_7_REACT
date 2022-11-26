@@ -16,16 +16,18 @@ import { Fragment } from "react"
 function App() {
   return (
     <Fragment>
-    <Header/>
-    <div className="App">  
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/logement/:id" element={<FicheLogement />} />
-        <Route path="/propos" element={<Propos />} />
-        <Route path="*" element={<Page404 />} />
-      </Routes>
+    <div className="pageContainer">
+      <Header/>
+        <div className="App">  
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/logement/:id" element={<FicheLogement />} />
+            <Route path="/propos" element={<Propos />} />
+            <Route path="*" element={<Page404 />} />
+          </Routes>
+        </div>
+      <Footer/>
     </div>
-    <Footer/>
     </Fragment>
   );
 }
