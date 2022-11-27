@@ -1,0 +1,30 @@
+.errorPageStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.returnLinkStyle, .warning, .errorServerMessage{
+    color: #ff6060;
+}
+
+
+.errorServerMessage {
+    margin: 30px;
+    font-size: 288px;
+}
+
+.warning{
+    font-size: 36px;
+}
+
+.returnLinkStyle{
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 200px
+}
+
+
+

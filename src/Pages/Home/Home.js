@@ -4,6 +4,9 @@ import './Home.css'
 import HeaderHome from '../../components/HeaderHome/HeaderHome'
 
 const Home = () => {
+
+    
+
     return (
         <Fragment>
             <div className="flexHome">

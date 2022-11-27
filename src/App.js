@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./Pages/Home/Home";
 import FicheLogement from "./Pages/FicheLogement/FicheLogement";
 import Propos from "./Pages/Propos/Propos";
-import Page404 from "./Pages/Page404/Page404";
+import PageErreur404 from "./Pages/PageErreur404/PageErreur404";
 
 // LAYOUT IMPORT
 import Header from "./components/Layout/Header/Header";
@@ -13,17 +13,23 @@ import Footer from "./components/Layout/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import { Fragment } from "react"
 
+
+
 function App() {
   return (
     <Fragment>
     <div className="pageContainer">
-      <Header/>
+      <Header menu={[
+        {onglet : "Accueil", chemin : "/"},
+        {onglet : "A propos", chemin : "/propos"},
+        // {onglet : "404 erreur test", chemin : "/404page"}
+      ]}/>
         <div className="App">  
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/logement/:id" element={<FicheLogement />} />
             <Route path="/propos" element={<Propos />} />
-            <Route path="*" element={<Page404 />} />
+            <Route path="*" element={<PageErreur404 />} />
           </Routes>
         </div>
       <Footer/>
