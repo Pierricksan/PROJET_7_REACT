@@ -1,8 +1,15 @@
 import React from 'react';
+import { Fragment } from 'react'
+import HeaderPage from '../../components/HeaderPage/HeaderPage'
+import imageAboutUs from '../../images/ImagesComponents/HeaderBackgroundAboutUs.png'
 
 const Propos = () => {
     return (
-        <h1>A propos </h1>
+        <Fragment>
+            <HeaderPage
+            imageLayout={imageAboutUs}
+            />
+        </Fragment>   
     )
 }
 

@@ -9,6 +9,9 @@ import PageErreur404 from "./Pages/PageErreur404/PageErreur404";
 import Header from "./components/Layout/Header/Header";
 import Footer from "./components/Layout/Footer/Footer";
 
+// ASSET IMPORT
+import LOGO from './images/ImagesLayout/LOGO.svg'
+
 // Composant import
 import { Routes, Route } from "react-router-dom";
 import { Fragment } from "react"
@@ -20,9 +23,11 @@ function App() {
     <Fragment>
     <div className="pageContainer">
         <div className="App">  
-          <Header menu={[
-          {onglet : "Accueil", chemin : "/"},
-          {onglet : "A propos", chemin : "/propos"},
+          <Header 
+          imageHeader={LOGO}
+          menu={[
+            {onglet : "Accueil", chemin : "/"},
+            {onglet : "A propos", chemin : "/propos"},
           // {onglet : "404 erreur test", chemin : "/404page"}
           ]}/>
           <Routes>

@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./Header.module.css";
-import LOGO from "../imagesLayout/LOGO.svg";
+// import LOGO from "../imagesLayout/LOGO.svg";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({ menu }) => {
+const Header = ({ menu, imageHeader }) => {
   return (
     <Fragment>
       <header className={styles.headerMenu}>
         <div>
-          <img src={LOGO} alt="" />
+          <img src={imageHeader} alt="" />
         </div>
         <nav className={styles.navBar}>
           {menu.map(({ onglet, chemin }, index) => {
