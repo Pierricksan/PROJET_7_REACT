@@ -1,4 +1,5 @@
 import React from 'react';
+import { Fragment } from 'react'
 import './Thumb.css'
 
 const Thumb = () => {
@@ -13,3 +14,5 @@ const Thumb = () => {
         </Fragment>
     )
 }
+
+export default Thumb

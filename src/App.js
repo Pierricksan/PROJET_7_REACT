@@ -19,12 +19,12 @@ function App() {
   return (
     <Fragment>
     <div className="pageContainer">
-      <Header menu={[
-        {onglet : "Accueil", chemin : "/"},
-        {onglet : "A propos", chemin : "/propos"},
-        // {onglet : "404 erreur test", chemin : "/404page"}
-      ]}/>
         <div className="App">  
+          <Header menu={[
+          {onglet : "Accueil", chemin : "/"},
+          {onglet : "A propos", chemin : "/propos"},
+          // {onglet : "404 erreur test", chemin : "/404page"}
+          ]}/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/logement/:id" element={<FicheLogement />} />

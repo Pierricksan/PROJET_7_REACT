@@ -1,16 +1,25 @@
 import React from "react";
 import {Fragment} from "react"
-import './Home.css'
-import HeaderHome from '../../components/HeaderHome/HeaderHome'
+import styles from './Home.module.css'
+import HeaderPage from '../../components/HeaderPage/HeaderPage'
+import Thumb from '../../components/Thumb/Thumb'
+
 
 const Home = () => {
-
-    
-
     return (
         <Fragment>
-            <div className="flexHome">
-            <HeaderHome/>
+            <HeaderPage>
+                Chez vous, partout et ailleurs
+            </HeaderPage>
+            <div className={styles.flexHome}>
+                <div className={styles.containerHomeLocations}>
+                    <Thumb/>
+                    <Thumb/>
+                    <Thumb/>
+                    <Thumb/>
+                    <Thumb/>
+                    <Thumb/>
+                </div>
             </div>
         </Fragment>
     )

@@ -1,16 +1,16 @@
 import React from 'react';
-import './HeaderHome.css';
+import './HeaderPage.css';
 import IMG from '../ImagesComponents/IMG.png'
 import { Fragment } from 'react';
 
-const HeaderHome = () => {
+const HeaderPage = ({children}) => {
     return (
         <Fragment>
             <div className="HeaderHome">
                 <div className="containerImgHeader">
                     <img src={IMG} alt=""/>
                     <div className="HeaderHomeText">
-                        <h1>Chez vous, et partout ailleurs</h1>
+                        <h1>{children}</h1>
                     </div>
                 </div>
             </div>
@@ -19,4 +19,4 @@ const HeaderHome = () => {
     )
 }
 
-export default HeaderHome;
+export default HeaderPage;
