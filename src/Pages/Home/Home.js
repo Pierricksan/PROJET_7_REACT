@@ -1,7 +1,7 @@
 import React from "react";
 import {Fragment} from "react"
 import styles from './Home.module.css'
-import HeaderPage from '../../components/HeaderPage/HeaderPage'
+import Banner from '../../components/Banner/Banner'
 import Thumb from '../../components/Thumb/Thumb'
 import image from '../../images/ImagesComponents/IMG.png'
 
@@ -9,11 +9,11 @@ import image from '../../images/ImagesComponents/IMG.png'
 const Home = () => {
     return (
         <Fragment>
-            <HeaderPage
+            <Banner
                 imageLayout={image}
             >
                 Chez vous, partout et ailleurs
-            </HeaderPage>
+            </Banner>
             <div className={styles.flexHome}>
                 <div className={styles.containerHomeLocations}>
                     <Thumb/>

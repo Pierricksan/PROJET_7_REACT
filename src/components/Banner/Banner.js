@@ -1,17 +1,17 @@
 import React from "react";
-import styles from "./HeaderPage.module.css";
+import styles from "./Banner.module.css";
 
 import { Fragment } from "react";
 
-const HeaderPage = ({ children, imageLayout }) => {
+const Banner = ({ children, imageLayout }) => {
   return (
     <Fragment>
       <div className={styles.HeaderHome}>
-        <div className={styles.containerImgHeader}>
+        <div className={styles.containerImgBanner}>
           <img
             className={styles.ImgHeader}
             src={imageLayout} alt="" />
-          <div className={styles.HeaderHomeText}>
+          <div className={styles.BannerText}>
             <h1>{children}</h1>
           </div>
         </div>
@@ -20,4 +20,4 @@ const HeaderPage = ({ children, imageLayout }) => {
   );
 };
 
-export default HeaderPage;
+export default Banner;

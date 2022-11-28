@@ -1,12 +1,12 @@
 import React from 'react';
 import { Fragment } from 'react'
-import HeaderPage from '../../components/HeaderPage/HeaderPage'
+import Banner from '../../components/Banner/Banner';
 import imageAboutUs from '../../images/ImagesComponents/HeaderBackgroundAboutUs.png'
 
 const Propos = () => {
     return (
         <Fragment>
-            <HeaderPage
+            <Banner
             imageLayout={imageAboutUs}
             />
         </Fragment>   
