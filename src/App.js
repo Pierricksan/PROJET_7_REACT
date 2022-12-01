@@ -31,10 +31,10 @@ function App() {
           // {onglet : "404 erreur test", chemin : "/404page"}
           ]}/>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/logement/:id" element={<FicheLogement />} />
-            <Route path="/propos" element={<Propos />} />
-            <Route path="*" element={<PageErreur404 />} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/logement/:id" element={<FicheLogement/>} />
+            <Route path="/propos" element={<Propos/>} />
+            <Route path="*" element={<PageErreur404/>} />
           </Routes>
         </div>
       <Footer/>
