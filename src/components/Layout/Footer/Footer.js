@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import "./Footer.css";
 
 const whiteColor = "#FFF";
+const widthFooterLogo = "140";
+const heightFooterLogo = "40";
 
 const Footer = () => {
   return (
@@ -9,8 +11,8 @@ const Footer = () => {
       <footer className="mainFooter">
         <div>
           <svg
-            width="211"
-            height="68"
+            width={widthFooterLogo}
+            height={heightFooterLogo}
             viewBox="0 0 211 68"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

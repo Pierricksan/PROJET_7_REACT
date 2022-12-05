@@ -1,0 +1,20 @@
+.containerCarroussel{
+  
+}
+
+.containerCollapseLogement{
+    width: 100%;
+    display: flex;
+}
+
+.containerDescription, .containerEquipement{
+    width: 50%;
+}
+
+.containerDescription {
+    margin-right: 50px;
+}
+
+.containerEquipement{
+    margin-left: 50px;
+}

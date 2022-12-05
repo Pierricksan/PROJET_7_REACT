@@ -8,8 +8,8 @@ const Carroussel = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const ContainerStyle = {
-    width: "600px",
-    height: "200px",
+    width: "1280px",
+    height: "415px",
     margin: "0 auto",
   };
 
@@ -23,7 +23,8 @@ const Carroussel = ({ slides }) => {
     height: "100%",
     borderRadius: "10px",
     backgroundPosition: "center",
-    backgroundSize: "cover",
+    // cover ou contain à décider
+    backgroundSize: "contain", 
     backgroundImage: `url(${slides[currentIndex].url})`,
   };
 
@@ -60,8 +61,9 @@ const Carroussel = ({ slides }) => {
   const numberSlide = {
     position: 'absolute',
     bottom: '10px',
-    left: '50%',
+    left: '49%',
     color: '#fff',
+    fontSize: '24px'
   }
 
   return (
@@ -74,7 +76,7 @@ const Carroussel = ({ slides }) => {
           <div style={rightArrowStyle} onClick={goToNext}>
             <FontAwesomeIcon icon={faChevronRight} size="3x" />
           </div>
-          <img style={slideStyle} alt='logement'/>
+          <div style={slideStyle} role="img" alt='logement'/>
           <div style={numberSlide}>{currentIndex + 1}/{slides.length}</div>
         </div>
       </div>
