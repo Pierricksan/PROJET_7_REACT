@@ -2,7 +2,10 @@ import React from "react";
 import { Fragment } from "react";
 import Carroussel from "../../components/Carroussel/Carroussel";
 import Collapse from "../../components/Collapse/Collapse";
+import User from "../../components/User/User";
 import "./FicheLogement.css";
+
+import AVATAR from "../../images/ImagesComponents/avatarTest.jpg";
 
 const slides = [
   { url: "https://via.placeholder.com/2000x600/0000FF/808080" },
@@ -12,26 +15,37 @@ const slides = [
 ];
 
 const FicheLogement = () => {
-  
   const fontCollapse = {
     fontSize: "18px",
   };
 
   const fontContent = {
     fontSize: "14px",
-  }
+  };
 
   return (
     <Fragment>
       <div className="containerCarroussel">
         <Carroussel slides={slides} />
       </div>
+      <div className="containerInformations">
+        <User avatarPicture={AVATAR} userName="Alexandre Dumas" />
+        
+      </div>
       <div className="containerCollapseLogement">
         <div className="containerDescription">
-          <Collapse label="Description" fontCustom={fontCollapse}></Collapse>
+          <Collapse
+            label="Description"
+            fontCustom={fontCollapse}
+            contentCustom={fontContent}
+          ></Collapse>
         </div>
         <div className="containerEquipement">
-          <Collapse label="Equipement" fontCustom={fontCollapse}></Collapse>
+          <Collapse
+            label="Equipement"
+            fontCustom={fontCollapse}
+            contentCustom={fontContent}
+          ></Collapse>
         </div>
       </div>
     </Fragment>
