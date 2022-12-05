@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collapseContainer{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.collapseBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: 10px ;
+    background-color: #FF6060;
+    padding: 10px;
+    cursor : pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.barTitle{
+    text-align: center;
+}
+
+.chevronIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.content {
+    padding: 0.5rem;
+    
+}
+    
+.content-parent {
+    height: 0px;
+    overflow: hidden;
+    transition: height ease 0.9s;
+    background-color: #f6f6f6;
+    margin-top: -5px;
+    border-radius: 5px 5px 10px 10px;
+}
+
+
+
