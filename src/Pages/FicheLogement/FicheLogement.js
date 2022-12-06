@@ -3,6 +3,9 @@ import { Fragment } from "react";
 import Carroussel from "../../components/Carroussel/Carroussel";
 import Collapse from "../../components/Collapse/Collapse";
 import User from "../../components/User/User";
+import Title from "../../components/Title/Title";
+import Tag from "../../components/Tag/Tag";
+
 import "./FicheLogement.css";
 
 import AVATAR from "../../images/ImagesComponents/avatarTest.jpg";
@@ -20,7 +23,7 @@ const FicheLogement = () => {
   };
 
   const fontContent = {
-    fontSize: "14px",
+    fontSize: "18px",
   };
 
   return (
@@ -29,6 +32,10 @@ const FicheLogement = () => {
         <Carroussel slides={slides} />
       </div>
       <div className="containerInformations">
+        <Title mainTitle="Super Appartement Cosy" secondaryTitle="Information décrivant le logement" />
+        <Tag>Cozy</Tag>
+        <Tag>Habitable</Tag>
+        <Tag>Soft</Tag>
         <User avatarPicture={AVATAR} userName="Alexandre Dumas" />
       </div>
       <div className="containerCollapseLogement">
