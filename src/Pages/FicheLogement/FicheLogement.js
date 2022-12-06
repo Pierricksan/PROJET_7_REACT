@@ -5,6 +5,7 @@ import Collapse from "../../components/Collapse/Collapse";
 import User from "../../components/User/User";
 import Title from "../../components/Title/Title";
 import Tag from "../../components/Tag/Tag";
+import Rating from "../../components/Rating/Rating";
 
 import "./FicheLogement.css";
 
@@ -32,10 +33,14 @@ const FicheLogement = () => {
         <Carroussel slides={slides} />
       </div>
       <div className="containerInformations">
-        <Title mainTitle="Super Appartement Cosy" secondaryTitle="Information décrivant le logement" />
+        <Title
+          mainTitle="Super Appartement Cosy"
+          secondaryTitle="Information décrivant le logement"
+        />
         <Tag>Cozy</Tag>
         <Tag>Habitable</Tag>
         <Tag>Soft</Tag>
+        <Rating countRating="2"/>
         <User avatarPicture={AVATAR} userName="Alexandre Dumas" />
       </div>
       <div className="containerCollapseLogement">
