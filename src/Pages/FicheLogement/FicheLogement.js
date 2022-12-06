@@ -30,7 +30,6 @@ const FicheLogement = () => {
       </div>
       <div className="containerInformations">
         <User avatarPicture={AVATAR} userName="Alexandre Dumas" />
-        
       </div>
       <div className="containerCollapseLogement">
         <div className="containerDescription">
@@ -38,14 +37,30 @@ const FicheLogement = () => {
             label="Description"
             fontCustom={fontCollapse}
             contentCustom={fontContent}
-          ></Collapse>
+          >
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </Collapse>
         </div>
         <div className="containerEquipement">
           <Collapse
             label="Equipement"
             fontCustom={fontCollapse}
             contentCustom={fontContent}
-          ></Collapse>
+          >
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </Collapse>
         </div>
       </div>
     </Fragment>

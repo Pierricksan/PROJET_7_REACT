@@ -67,7 +67,7 @@ const Collapse = ({
               : { height: "0px" }
           }
         >
-          <div style={{ ...content, contentCustom }}>{children}</div>
+          <div style={{ ...content, ...contentCustom }}>{children}</div>
         </div>
       </div>
     </Fragment>
