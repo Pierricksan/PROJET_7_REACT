@@ -1,5 +1,5 @@
 .userInfoContainer {
-  width: 300px;
+  width: 200px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -23,6 +23,6 @@
   color: #ff6060;
   margin: 0px;
   font-size: 18px;
-  line-height: 2em;
+  line-height: 1.5em;
   width:min-content;
 }

@@ -5,7 +5,7 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Collapse = ({
-  fontCustom,
+  titleCustom,
   barCustom,
   contentCustom,
   label,
@@ -49,7 +49,7 @@ const Collapse = ({
     <Fragment>
       <div className="collapseContainer">
         <div style={{ ...collapseBar, ...barCustom }} onClick={toggle}>
-          <div style={{ ...barTitle, ...fontCustom }}>{label}</div>
+          <div style={{ ...barTitle, ...titleCustom }}>{label}</div>
           <div className="chevronIcon">
             {open ? (
               <FontAwesomeIcon icon={faChevronDown} size="lg" />

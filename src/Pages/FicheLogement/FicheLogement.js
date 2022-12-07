@@ -25,6 +25,8 @@ const FicheLogement = () => {
 
   const fontContent = {
     fontSize: "18px",
+    paddingTop: "30px",
+    paddingBottom: "30px",
   };
 
   return (
@@ -33,21 +35,33 @@ const FicheLogement = () => {
         <Carroussel slides={slides} />
       </div>
       <div className="containerInformations">
-        <Title
-          mainTitle="Super Appartement Cosy"
-          secondaryTitle="Information décrivant le logement"
-        />
-        <Tag>Cozy</Tag>
-        <Tag>Habitable</Tag>
-        <Tag>Soft</Tag>
-        <Rating countRating="2"/>
-        <User avatarPicture={AVATAR} userName="Alexandre Dumas" />
+        <div className="titleAndTags">
+          <div className="infoTitle">
+            <Title
+              mainTitle="Super Appartement Cosy trop bien"
+              secondaryTitle="Information décrivant le lieu"
+            />
+          </div>
+          <div className="infoTags">
+            <Tag>Cozy</Tag>
+            <Tag>Habitable</Tag>
+            <Tag>Soft</Tag>
+          </div>
+        </div>
+        <div className="userAndRating">
+          <div className="infoUser">
+            <User avatarPicture={AVATAR} userName="Alexandre Dumas" />
+          </div>
+          <div className="infoRating">
+            <Rating countRating="2" />
+          </div>
+        </div>
       </div>
       <div className="containerCollapseLogement">
         <div className="containerDescription">
           <Collapse
             label="Description"
-            fontCustom={fontCollapse}
+            titleCustom={fontCollapse}
             contentCustom={fontContent}
           >
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -62,7 +76,7 @@ const FicheLogement = () => {
         <div className="containerEquipement">
           <Collapse
             label="Equipement"
-            fontCustom={fontCollapse}
+            titleCustom={fontCollapse}
             contentCustom={fontContent}
           >
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

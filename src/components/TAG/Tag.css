@@ -3,4 +3,16 @@
     height: 25px;
     background-color: #ff6060;
     border-radius: 10px;
+    text-align: center;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.containerTag p{
+    color : white;
+    margin: 0px;
+    font-size: 14px;
 }
