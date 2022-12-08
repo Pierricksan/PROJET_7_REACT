@@ -6,7 +6,7 @@ import { Fragment } from "react";
 const Banner = ({ children, imageLayout }) => {
   return (
     <Fragment>
-      <div className={styles.HeaderHome}>
+      <div className={styles.containerBanner}>
         <div className={styles.containerImgBanner}>
           <img
             className={styles.ImgHeader}

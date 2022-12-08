@@ -38,13 +38,15 @@ const FicheLogement = () => {
         <div className="titleAndTags">
           <div className="infoTitle">
             <Title
-              mainTitle="Super Appartement Cosy trop bien"
-              secondaryTitle="Information décrivant le lieu"
+              mainTitle="Super Appartement Cosy trop bien et bien situé"
+              secondaryTitle="Information décrivant le lieu et la place"
             />
           </div>
           <div className="infoTags">
             <Tag>Cozy</Tag>
             <Tag>Habitable</Tag>
+            <Tag>Soft</Tag>
+            <Tag>Soft</Tag>
             <Tag>Soft</Tag>
           </div>
         </div>
@@ -53,7 +55,7 @@ const FicheLogement = () => {
             <User avatarPicture={AVATAR} userName="Alexandre Dumas" />
           </div>
           <div className="infoRating">
-            <Rating countRating="2" />
+            <Rating countRating="5" />
           </div>
         </div>
       </div>

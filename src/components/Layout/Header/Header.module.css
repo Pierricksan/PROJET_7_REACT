@@ -24,3 +24,16 @@
 .navLink:hover {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 1300px) {
+
+.headerMenu{
+
+}
+
+.navLink {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+}

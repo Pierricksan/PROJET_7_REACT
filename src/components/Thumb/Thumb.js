@@ -2,13 +2,13 @@ import React from 'react';
 import { Fragment } from 'react'
 import './Thumb.css'
 
-const Thumb = () => {
+const Thumb = ({sourceImg, children}) => {
     return (
         <Fragment>
-            <div className="container">
-                <img src="" alt=""/>
+            <div className="containerThumb">
+                <img src={sourceImg} alt=""/>
                 <div className="titleLocation">
-                    <h2>Titre de la location immobilière</h2>
+                    <h2>{children}</h2>
                 </div>
             </div>
         </Fragment>
