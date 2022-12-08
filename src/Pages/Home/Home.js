@@ -1,5 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import Banner from "../../components/Banner/Banner";
 import Thumb from "../../components/Thumb/Thumb";
@@ -11,7 +12,9 @@ const Home = () => {
       <Banner imageLayout={image}>Chez vous, partout et ailleurs</Banner>
       <div className={styles.flexHome}>
         <div className={styles.containerHomeLocations}>
-          <Thumb>Titre de la location immobilière</Thumb>
+          <Link to="/logement/:id">
+            <Thumb>Titre de la location immobilière linked</Thumb>
+          </Link>
           <Thumb>Titre de la location immobilière</Thumb>
           <Thumb>Titre de la location immobilière</Thumb>
           <Thumb>Titre de la location immobilière</Thumb>
