@@ -24,8 +24,8 @@ const Carroussel = ({ slides }) => {
     borderRadius: "10px",
     backgroundPosition: "center",
     // cover ou contain à décider
-    backgroundSize: "contain", 
-    backgroundImage: `url(${slides[currentIndex].url})`,
+    backgroundSize: "cover", 
+    backgroundImage: `url(${slides[currentIndex]})`,
   };
 
   const leftArrowStyle = {

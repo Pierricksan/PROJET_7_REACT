@@ -47,3 +47,7 @@
 .containerEquipement{
     margin-left: 50px;
 }
+
+.containerEquipement li {
+    list-style: none;
+}

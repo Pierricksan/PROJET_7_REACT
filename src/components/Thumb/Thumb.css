@@ -1,19 +1,29 @@
 .containerThumb {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-  border-radius: 10px;
   width: 300px;
-  height: 300px;
-  padding: 20px;
-  position: relative;
+    height: 300px;
+    margin: 0 auto;
 }
+
+.contentThumb{
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .contentThumb img{
+  object-fit: cover;
+  width: 320%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+} */
+
 h2 {
   margin: 0;
-  padding-right: 200px;
+  padding-right: 50px;
   font-size: 18px;
+  color: rgb(0, 0, 0);
 }
 
 .titleLocation {
@@ -27,6 +37,6 @@ h2 {
   .containerThumb {
     width: 335px;
 height: 255px;
-background-color: #ff6060;
+/* background-color: #ff6060; */
   }
   }
