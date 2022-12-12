@@ -101,7 +101,7 @@ if(idLogement !== undefined) {
             />
           </div>
           <div className="infoRating">
-            <Rating countRating={idLogement.rating} />
+            <Rating stars={idLogement.rating} />
           </div>
         </div>
       </div>
