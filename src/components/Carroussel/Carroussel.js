@@ -23,8 +23,7 @@ const Carroussel = ({ slides }) => {
     height: "100%",
     borderRadius: "10px",
     backgroundPosition: "center",
-    // cover ou contain à décider
-    backgroundSize: "cover", 
+    backgroundSize: "cover",
     backgroundImage: `url(${slides[currentIndex]})`,
   };
 
@@ -59,27 +58,43 @@ const Carroussel = ({ slides }) => {
   };
 
   const numberSlide = {
-    position: 'absolute',
-    bottom: '10px',
-    left: '49%',
-    color: '#fff',
-    fontSize: '24px'
-  }
+    position: "absolute",
+    bottom: "10px",
+    left: "49%",
+    color: "#fff",
+    fontSize: "24px",
+  };
+
+  const lengthSlide = slides.length === 1;
+
+  const oneSlide = (
+    <div style={ContainerStyle}>
+      <div style={sliderStyles}>
+        <div style={slideStyle} role="img" alt="logement" />
+      </div>
+    </div>
+  );
+
+  const manySlides = (
+    <div style={ContainerStyle}>
+      <div style={sliderStyles}>
+        <div style={leftArrowStyle} onClick={goToPrevious}>
+          <FontAwesomeIcon icon={faChevronLeft} size="3x" />
+        </div>
+        <div style={rightArrowStyle} onClick={goToNext}>
+          <FontAwesomeIcon icon={faChevronRight} size="3x" />
+        </div>
+        <div style={slideStyle} role="img" alt="logement" />
+        <div style={numberSlide}>
+          {currentIndex + 1}/{slides.length}
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <Fragment>
-      <div style={ContainerStyle}>
-        <div style={sliderStyles}>
-          <div style={leftArrowStyle} onClick={goToPrevious}>
-            <FontAwesomeIcon icon={faChevronLeft} size="3x" />
-          </div>
-          <div style={rightArrowStyle} onClick={goToNext}>
-            <FontAwesomeIcon icon={faChevronRight} size="3x" />
-          </div>
-          <div style={slideStyle} role="img" alt='logement'/>
-          <div style={numberSlide}>{currentIndex + 1}/{slides.length}</div>
-        </div>
-      </div>
+      {lengthSlide ? oneSlide : manySlides}
     </Fragment>
   );
 };
