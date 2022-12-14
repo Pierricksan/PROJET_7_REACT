@@ -10,8 +10,18 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 1280px;
+    
     flex:  1;
+
+    
 }
+
+@media only screen and (max-width: 1300px) {
+        .App{
+            width: 90%;
+        }
+}
+
 
 
 

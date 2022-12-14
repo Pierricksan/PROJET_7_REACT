@@ -34,7 +34,7 @@ const Rating = ({ stars }) => {
 const ratingStar = Array.from({length:5}, (element, index) => {
 
     return (
-        <span key={index}>
+        <span className="starStyle" key={index}>
 { stars >= index +1 
     ? svgStarFull 
     : svgEmptyStar

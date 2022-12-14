@@ -8,8 +8,8 @@ const Carroussel = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const ContainerStyle = {
-    width: "1280px",
-    height: "415px",
+    width: "100%",
+    height: "100%",
     margin: "0 auto",
   };
 

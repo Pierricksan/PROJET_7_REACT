@@ -4,12 +4,12 @@ import styles from "./Header.module.css";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({ menu, imageHeader }) => {
+const Header = ({ menu, imageHeader, altImgHeader }) => {
   return (
     <Fragment>
       <header className={styles.headerMenu}>
-        <div>
-          <img src={imageHeader} alt="" />
+        <div className={styles.headerLogo}>
+          <img src={imageHeader} alt={altImgHeader} />
         </div>
         <nav className={styles.navBar}>
           {menu.map(({ onglet, chemin }, index) => {
