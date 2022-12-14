@@ -1,11 +1,30 @@
 import "./Rating.css";
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
+import SizeWindowHook from '../SizeWindowHook/SizeWindowHook.js';
+
 
 const Rating = ({ stars }) => {
+
+  // import du windowsSize pour connaitre la taille de l'écran et changer la taille des étoiles
+const screenWidth = SizeWindowHook().width
+const [disableParallax, setdisableParallax] = useState(false);
+
+useEffect(() => {
+  if (screenWidth <= 1300) {
+    setdisableParallax(true);
+  } else {
+    setdisableParallax(false);
+  }
+}, [screenWidth]);
+
+let starSize = "";
+disableParallax ? starSize = "15" : starSize = "30";
+
+
   const svgStarFull = (
     <svg
-      width="30"
-      height="30"
+      width={starSize}
+      height={starSize}
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -18,8 +37,8 @@ const Rating = ({ stars }) => {
   );
   const svgEmptyStar = (
     <svg
-      width="30"
-      height="30"
+      width={starSize}
+      height={starSize}
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
