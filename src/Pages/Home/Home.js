@@ -5,6 +5,7 @@ import styles from "./Home.module.css";
 import Banner from "../../components/Banner/Banner";
 import Thumb from "../../components/Thumb/Thumb";
 import image from "../../images/ImagesComponents/IMG.png";
+// import du fichier json
 import data from '../../API/annonce.json';
 
 const Home = () => {
@@ -34,7 +35,10 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Banner imageLayout={image}>Chez vous, partout et ailleurs</Banner>
+      <div className={styles.bannerHome}>
+      <Banner imageBanner={image}>Chez vous, partout et ailleurs</Banner>
+      </div>
+      
       <div className={styles.flexHome}>
         <div className={styles.containerHomeLocations}>
           {data.map(({id, title, cover}, index) => {

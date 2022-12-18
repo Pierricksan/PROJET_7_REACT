@@ -1,0 +1,15 @@
+.numberSlides{
+    position: absolute;
+    bottom: 10px;
+    left: 49%;
+    color: #fff;
+    font-size: 14px;
+    visibility: visible
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .numberSlides {
+        visibility: hidden;
+    }
+}

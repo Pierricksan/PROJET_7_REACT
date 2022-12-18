@@ -1,0 +1,26 @@
+.mainTitleStyle{
+    font-weight: 500;
+    font-style: normal;
+    font-size: 36px;
+    color: #ff6060;
+    margin: 0px 0px 10px;
+}
+
+.secondaryTitleStyle{
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    color: #ff6060;
+    margin: 0px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .mainTitleStyle{
+        font-size: 18px;
+    }
+
+    .secondaryTitleStyle{
+        font-size: 14px;
+    }
+}

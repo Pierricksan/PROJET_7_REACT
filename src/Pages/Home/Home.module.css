@@ -15,6 +15,12 @@
     gap: 50px;
 }
 
+.bannerHome{
+    width: 100%;
+    height: 225px;
+    margin: 0 auto;
+}
+
 @media only screen and (max-width: 1300px) {
    
    .flexHome{

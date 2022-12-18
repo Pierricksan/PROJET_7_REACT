@@ -1,10 +1,28 @@
 import "./Carroussel.css";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import SizeWindowHook from '../SizeWindowHook/SizeWindowHook.js';
 
 const Carroussel = ({ slides }) => {
+
+  const screenWidth = SizeWindowHook().width
+const [disableParallax, setdisableParallax] = useState(false);
+
+useEffect(() => {
+  if (screenWidth <= 1300) {
+    setdisableParallax(true);
+  } else {
+    setdisableParallax(false);
+  }
+}, [screenWidth]);
+
+let chevronSize = "";
+disableParallax ? chevronSize = "lg" : chevronSize = "3x";
+
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const ContainerStyle = {
@@ -57,13 +75,6 @@ const Carroussel = ({ slides }) => {
     setCurrentIndex(newIndex);
   };
 
-  const numberSlide = {
-    position: "absolute",
-    bottom: "10px",
-    left: "49%",
-    color: "#fff",
-    fontSize: "24px",
-  };
 
   const lengthSlide = slides.length === 1;
 
@@ -79,13 +90,13 @@ const Carroussel = ({ slides }) => {
     <div style={ContainerStyle}>
       <div style={sliderStyles}>
         <div style={leftArrowStyle} onClick={goToPrevious}>
-          <FontAwesomeIcon icon={faChevronLeft} size="3x" />
+          <FontAwesomeIcon icon={faChevronLeft} size={chevronSize} />
         </div>
         <div style={rightArrowStyle} onClick={goToNext}>
-          <FontAwesomeIcon icon={faChevronRight} size="3x" />
+          <FontAwesomeIcon icon={faChevronRight} size={chevronSize} />
         </div>
         <div style={slideStyle} role="img" alt="logement" />
-        <div style={numberSlide}>
+        <div className="numberSlides">
           {currentIndex + 1}/{slides.length}
         </div>
       </div>

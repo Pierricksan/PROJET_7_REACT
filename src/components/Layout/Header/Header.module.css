@@ -31,8 +31,6 @@
 }
 
 @media only screen and (max-width: 1300px) {
-  .headerMenu {
-  }
 
   .headerLogo img {
     width: 145px;
@@ -42,5 +40,6 @@
   .navLink {
     text-transform: uppercase;
     font-size: 12px;
+    margin-left: 15px;
   }
 }

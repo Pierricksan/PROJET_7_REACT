@@ -11,12 +11,6 @@ import "./FicheLogement.css";
 // import AVATAR from "../../images/ImagesComponents/avatarTest.jpg";
 import dataLogement from "../../API/annonce.json";
 
-// const slides = [
-//   { url: "https://via.placeholder.com/2000x600/0000FF/808080" },
-//   { url: "https://via.placeholder.com/150/FFFF00/000000" },
-//   { url: "https://via.placeholder.com/150/0000FF/808080" },
-//   { url: "https://via.placeholder.com/150/000000/FFFFFF" },
-// ];
 
 const FicheLogement = () => {
 /// navigate 
@@ -53,7 +47,7 @@ const FicheLogement = () => {
 
   //   console.log(dataString)
 
-  //sconsole.log(JSON.parse(data))
+  //console.log(JSON.parse(data))
 
   const fontCollapse = {
     fontSize: "18px",

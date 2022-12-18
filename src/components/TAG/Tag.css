@@ -10,10 +10,21 @@
     align-items: center;
     margin-right: 15px;
     margin-top: 15px;
+    padding: 5px;
 }
 
 .containerTag p{
     color : white;
     margin: 0px;
     font-size: 14px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .containerTag{
+        width: 84px;
+        height: 18px;
+    }
+    .containerTag p{
+        font-size: 10px;
+    }
 }

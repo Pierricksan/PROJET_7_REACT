@@ -10,7 +10,7 @@ import './Propos.css'
 const Propos = () => {
   return (
     <Fragment>
-      <Banner imageLayout={imageAboutUs} />
+      <Banner imageBanner={imageAboutUs} />
       <div className="containerCollapseAboutUs">
         <Collapse label="Fiabilité">
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les
