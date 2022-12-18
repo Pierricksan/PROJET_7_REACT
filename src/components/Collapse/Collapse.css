@@ -17,6 +17,12 @@
     height: 40px;
 }
 
+.collapseBar h2{
+    color: white;
+    font-weight: 500;
+    margin: 0;
+}
+
 .chevronIcon{
     width: 30px;
     height: 30px;
@@ -32,6 +38,10 @@
     background-color: #f6f6f6;
     margin-top: -5px;
     border-radius: 5px 5px 10px 10px;
+}
+
+.paragraphCollapse {
+    margin: 0;
 }
 
 @media only screen and (max-width: 1300px) {

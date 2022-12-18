@@ -8,126 +8,85 @@ import Title from "../../components/Title/Title";
 import Tag from "../../components/Tag/Tag";
 import Rating from "../../components/Rating/Rating";
 import "./FicheLogement.css";
-// import AVATAR from "../../images/ImagesComponents/avatarTest.jpg";
+
 import dataLogement from "../../API/annonce.json";
 
 
 const FicheLogement = () => {
-/// navigate 
-  const navigate = useNavigate()
+  /// navigate
+  const navigate = useNavigate();
 
   //// UseParams pour l'url
   let { id } = useParams();
-  console.log(id);
-  const idLogement = dataLogement.find((p) => p.id === id);
+  const idLogement = dataLogement.find(p => p.id === id);
 
-  // console.log(idLogement.title)
-  //   const [data, setData] = useState([]);
-  //   const getData = () => {
-  //     fetch(`http://localhost:3000/logement/${id}`, {
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Accept: "application/json",
-  //       },
-  //     })
-  //       .then(function (response) {
-  //         console.log(response);
-  //         return response.json();
-  //       })
-  //       .then(function (myJson) {
-  //         console.log(myJson);
-  //         setData(myJson);
-  //       });
-  //   };
-  //   useEffect(() => {
-  //     getData();
-  //   }, []);
-
-  // const dataString = JSON.stringify(data)
-
-  //   console.log(dataString)
-
-  //console.log(JSON.parse(data))
-
-  const fontCollapse = {
-    fontSize: "18px",
-  };
+  useEffect(() => {
+    if (idLogement === undefined) {
+      navigate("/erreur");
+    }
+  });
 
   const fontContent = {
-    fontSize: "18px",
     paddingTop: "30px",
     paddingBottom: "30px",
     textDecoration: "none",
   };
 
-  useEffect(() => {
-    
-    if (idLogement === undefined) {
-      navigate('/erreur')
-    }
-  })
-
-if(idLogement !== undefined) {
-  return (
-    <Fragment>
-      <div className="containerCarroussel">
-        <Carroussel slides={idLogement.pictures} />
-      </div>
-      <div className="containerInformations">
-        <div className="titleAndTags">
-          <div className="infoTitle">
-            <Title
-              mainTitle={idLogement.title}
-              secondaryTitle={idLogement.location}
-            />
-          </div>
-          <div className="infoTags">
-            {idLogement.tags.map((tags, index) => {
-              return <Tag key={index}>{tags}</Tag>;
-            })}
-          </div>
+  if (idLogement !== undefined) {
+    return (
+      <Fragment>
+        <div className="containerCarroussel">
+          <Carroussel slides={idLogement.pictures} />
         </div>
-        <div className="userAndRating">
-          <div className="infoUser">
-            <User
-              avatarPicture={idLogement.host.picture}
-              userName={idLogement.host.name}
-            />
+        <div className="containerInformations">
+          <div className="titleAndTags">
+            <div className="infoTitle">
+              <Title
+                mainTitle={idLogement.title}
+                secondaryTitle={idLogement.location}
+              />
+            </div>
+            <div className="infoTags">
+              {idLogement.tags.map((tags, index) => {
+                return <Tag key={index}>{tags}</Tag>;
+              })}
+            </div>
           </div>
-          <div className="infoRating">
-            <Rating stars={idLogement.rating} />
+          <div className="userAndRating">
+            <div className="infoUser">
+              <User
+                avatarPicture={idLogement.host.picture}
+                userName={idLogement.host.name}
+              />
+            </div>
+            <div className="infoRating">
+              <Rating stars={idLogement.rating} />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="containerCollapseLogement">
-        <div className="containerDescription">
-          <Collapse
-            label="Description"
-            titleCustom={fontCollapse}
-            contentCustom={fontContent}
-          >
-            {idLogement.description}
-          </Collapse>
+        <div className="containerCollapseLogement">
+          <div className="containerDescription">
+            <Collapse
+              label="Description"
+              contentCustom={fontContent}
+            >
+              {idLogement.description}
+            </Collapse>
+          </div>
+          <div className="containerEquipement">
+            <Collapse
+              label="Equipement"
+              contentCustom={fontContent}
+            >
+              {idLogement.equipments.map((equipments, index) => {
+                return <li key={index}>{equipments}</li>;
+              })}
+            </Collapse>
+          </div>
         </div>
-        <div className="containerEquipement">
-          <Collapse
-            label="Equipement"
-            titleCustom={fontCollapse}
-            contentCustom={fontContent}
-          >
-            {idLogement.equipments.map((equipments, index)=> {
-              return (
-                <li key={index}>{equipments}</li>
-              )
-            })}
-          </Collapse>
-        </div>
-      </div>
-    </Fragment>
-  );
-}
-
-  
+      </Fragment>
+    );
+  }
 };
 
 export default FicheLogement;

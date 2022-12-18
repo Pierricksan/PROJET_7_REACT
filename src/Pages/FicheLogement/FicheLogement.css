@@ -56,6 +56,14 @@
     list-style: none;
 }
 
+.containerDescription h2 {
+    font-size: 18px;
+}
+
+.containerEquipement h2{
+    font-size: 18px;
+}
+
 @media only screen and (max-width: 1300px) {
 
     .containerCarroussel{
@@ -91,5 +99,21 @@
     .containerEquipement{
         margin-left: 0px;
     }
-    
+
+    .containerDescription h2 {
+        font-size: 12px;
+    }
+
+    .containerDescription p{
+        font-size: 12px;
+    }
+
+    .containerEquipement li {
+        font-size: 12px;
+    }
+
+    .containerEquipement h2 {
+        font-size: 12px;
+    }
+
 }
