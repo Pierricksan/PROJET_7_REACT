@@ -1,16 +1,36 @@
 import React from "react";
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Banner from "../../components/Banner/Banner";
 import Collapse from "../../components/Collapse/Collapse";
-import imageAboutUs from "../../images/ImagesComponents/HeaderBackgroundAboutUs.png";
+import SizeWindowHook from "../../components/SizeWindowHook/SizeWindowHook";
+import imageAboutUsDesktop from "../../images/ImagesComponents/BannerAboutUsDesktop.png";
+import imageAboutUsMobile from "../../images/ImagesComponents/BannerAboutUsMobile.png";
 
-import './Propos.css'
-
+import "./Propos.css";
 
 const Propos = () => {
+  const screenWidth = SizeWindowHook().width;
+  const [disableParallax, setdisableParallax] = useState(false);
+
+  useEffect(() => {
+    if (screenWidth <= 1300) {
+      setdisableParallax(true);
+    } else {
+      setdisableParallax(false);
+    }
+  }, [screenWidth]);
+
+  let bannerImageAbout = "";
+  disableParallax
+    ? (bannerImageAbout = imageAboutUsMobile)
+    : (bannerImageAbout = imageAboutUsDesktop);
+
   return (
     <Fragment>
-      <Banner imageBanner={imageAboutUs} />
+      <div className="bannerAbout">
+        <Banner imageBanner={bannerImageAbout} descriptionAlt="un paysage montagneux enneigé et un beau temps avec une forêt d'arbres"/>
+      </div>
+
       <div className="containerCollapseAboutUs">
         <Collapse label="Fiabilité">
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les

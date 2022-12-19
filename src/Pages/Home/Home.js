@@ -29,14 +29,10 @@ const Home = () => {
   // useEffect(() => {
   //   getData();
   // }, []);
-
-
-  console.log(data)
-
   return (
     <Fragment>
       <div className={styles.bannerHome}>
-      <Banner imageBanner={image}>Chez vous, partout et ailleurs</Banner>
+      <Banner imageBanner={image} descriptionAlt="un paysage de montagne avec brouillard et quelques arbres">Chez vous, partout et ailleurs</Banner>
       </div>
       
       <div className={styles.flexHome}>

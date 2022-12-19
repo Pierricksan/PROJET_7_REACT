@@ -3,7 +3,7 @@ import React from "react";
 
 import { Fragment } from "react";
 
-const Banner = ({ children, imageBanner }) => {
+const Banner = ({ children, imageBanner, descriptionAlt }) => {
 
 
   const containerBanner = {
@@ -39,6 +39,7 @@ const Banner = ({ children, imageBanner }) => {
   const textBanner = {
     fontWeight: "500",   
     margin: "0",
+    fontSize: "24px",
   }
 
   return (
@@ -46,7 +47,7 @@ const Banner = ({ children, imageBanner }) => {
       <div style={containerBanner}>
         <div style={bannerImageContainer}>
           <div style={bannerImage}
-            role="img" alt="" />
+            role="img" alt={descriptionAlt} />
           <div style={bannerTextContainer}>
             <h1 style={textBanner}>{children}</h1>
           </div>

@@ -32,6 +32,11 @@
 
 @media only screen and (max-width: 1300px) {
 
+  .headerMenu {
+  
+    margin: 15px auto;
+   
+  }
   .headerLogo img {
     width: 145px;
     height: 45px;

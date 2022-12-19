@@ -33,6 +33,11 @@
     height: 32px;
   }
 
+  .userInfoContainer{
+    width: 120px;
+    
+  }
+
   .userNameInfo {
     font-size: 12px;
   }
