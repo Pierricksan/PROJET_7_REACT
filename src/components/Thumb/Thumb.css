@@ -33,7 +33,7 @@
   color: rgb(255, 255, 255);
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 768px) {
   .containerThumb {
     width: 335px;
     height: 255px;

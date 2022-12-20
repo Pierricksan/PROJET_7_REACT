@@ -10,7 +10,7 @@ const screenWidth = SizeWindowHook().width
 const [disableParallax, setdisableParallax] = useState(false);
 
 useEffect(() => {
-  if (screenWidth <= 1300) {
+  if (screenWidth <= 768) {
     setdisableParallax(true);
   } else {
     setdisableParallax(false);

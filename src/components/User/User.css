@@ -27,7 +27,7 @@
   width:min-content;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 768px) {
   .avatarContainer {
     width: 32px;
     height: 32px;

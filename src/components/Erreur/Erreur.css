@@ -26,7 +26,7 @@
     margin-top: 5em
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 768px) {
 
     .errorPageStyle{
         

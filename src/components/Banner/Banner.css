@@ -13,7 +13,7 @@
     font-size: 48px;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 768px) {
 
     .bannerTextContainer{
         text-align: left;

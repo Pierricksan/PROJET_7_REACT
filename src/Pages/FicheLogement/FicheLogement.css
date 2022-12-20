@@ -1,122 +1,120 @@
-.containerCarroussel{
-  
+.containerCarroussel {
 }
 
-.containerCollapseLogement{
-    width: 100%;
-    display: flex;
+.containerCollapseLogement {
+  width: 100%;
+  display: flex;
 }
 
-
-.containerInformations{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    height: 125px;
+.containerInformations {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  height: 125px;
 }
 
-.titleAndTags{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.titleAndTags {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.userAndRating{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
+.userAndRating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
-
-.infoTags{
-    display:flex;
-    flex-wrap: wrap;
+.infoTags {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.containerCarroussel{
-    width: 100%;
-    height: 415px;
+.containerCarroussel {
+  width: 100%;
+  height: 415px;
 }
 
-.containerDescription, .containerEquipement{
-    width: 50%;
+.containerDescription,
+.containerEquipement {
+  width: 50%;
 }
 
 .containerDescription {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
-.containerEquipement{
-    margin-left: 50px;
+.containerEquipement {
+  margin-left: 50px;
 }
 
 .containerEquipement li {
-    list-style: none;
+  list-style: none;
 }
 
 .containerDescription h2 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
-.containerEquipement h2{
-    font-size: 18px;
+.containerEquipement h2 {
+  font-size: 18px;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 992px) {
+  .containerInformations {
+    flex-direction: column;
+    align-items: space-between;
+    height: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 
-    .containerCarroussel{
-        width: 100%;
-        height: 225px;
-    }
+  .userAndRating {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
 
-    .containerInformations{
-        flex-direction: column;
-        align-items: space-between;
-        height: 100%;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
+@media only screen and (max-width: 768px) {
+  .containerCarroussel {
+    width: 100%;
+    height: 225px;
+  }
 
-    .userAndRating{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-       margin-top: 20px;
-    }
+  .containerCollapseLogement {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerDescription,
+  .containerEquipement {
+    width: 100%;
+  }
 
-    .containerCollapseLogement{
-        display: flex;
-        flex-direction: column;
-    }
+  .containerDescription {
+    margin-right: 0px;
+  }
 
-    .containerDescription, .containerEquipement{
-        width: 100%;
-    }
+  .containerEquipement {
+    margin-left: 0px;
+  }
 
-    .containerDescription {
-        margin-right: 0px;
-    }
-    
-    .containerEquipement{
-        margin-left: 0px;
-    }
+  .containerDescription h2 {
+    font-size: 12px;
+  }
 
-    .containerDescription h2 {
-        font-size: 12px;
-    }
+  .containerDescription p {
+    font-size: 12px;
+  }
 
-    .containerDescription p{
-        font-size: 12px;
-    }
+  .containerEquipement li {
+    font-size: 12px;
+  }
 
-    .containerEquipement li {
-        font-size: 12px;
-    }
-
-    .containerEquipement h2 {
-        font-size: 12px;
-    }
-
+  .containerEquipement h2 {
+    font-size: 12px;
+  }
 }
