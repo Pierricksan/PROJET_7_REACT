@@ -6,12 +6,14 @@ import { Fragment } from "react";
 const PageErreur404 = () => {
   return (
     <Fragment>
-      <Erreur
-        errorType="404"
-        warningMessage="Oups ! La page que vous demandez n'existe pas ..."
-        returnPath="/"
-        returnMessage="Retournez sur la page d'accueil"
-      />
+      <div className="pageErreurNotFound">
+        <Erreur
+          errorType="404"
+          warningMessage="Oups ! La page que vous demandez n'existe pas ..."
+          returnPath="/"
+          returnMessage="Retournez sur la page d'accueil"
+        />
+      </div>
     </Fragment>
   );
 };

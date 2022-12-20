@@ -1,21 +1,18 @@
 import React from "react";
-
-
+import "./Banner.css";
 import { Fragment } from "react";
 
 const Banner = ({ children, imageBanner, descriptionAlt }) => {
-
-
   const containerBanner = {
     width: "100%",
     height: "100%",
     margin: "0 auto",
-  }
+  };
 
   const bannerImageContainer = {
     height: "100%",
     position: "relative",
-  }
+  };
 
   const bannerImage = {
     width: "100%",
@@ -24,32 +21,17 @@ const Banner = ({ children, imageBanner, descriptionAlt }) => {
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundImage: `url(${imageBanner})`,
-  }
-
-  const bannerTextContainer = {
-    position : "absolute",
-    textAlign: "center",
-    fontSize: "24px",
-    color: "#fff",
-    top: "40%",
-    width: "100%",
-    
-  }
-
-  const textBanner = {
-    fontWeight: "500",   
-    margin: "0",
-    fontSize: "24px",
-  }
+    border: "none",
+    filter: "brightness(75%)",
+  };
 
   return (
     <Fragment>
       <div style={containerBanner}>
         <div style={bannerImageContainer}>
-          <div style={bannerImage}
-            role="img" alt={descriptionAlt} />
-          <div style={bannerTextContainer}>
-            <h1 style={textBanner}>{children}</h1>
+          <div style={bannerImage} role="img" alt={descriptionAlt} />
+          <div className="bannerTextContainer">
+            <h1 className="textBanner">{children}</h1>
           </div>
         </div>
       </div>

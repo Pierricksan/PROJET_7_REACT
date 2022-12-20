@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .returnLinkStyle, .warning, .errorServerMessage{
@@ -25,5 +26,27 @@
     margin-top: 5em
 }
 
+@media only screen and (max-width: 1300px) {
+
+    .errorPageStyle{
+        
+    }
+
+    .errorServerMessage{
+        font-size: 96px;
+        margin: 100px 0px 0px;
+    }
+
+    .warning{
+        text-align: center;
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    .returnLinkStyle{
+        font-size: 14px;
+        margin-top: 5em
+    }
+}
 
 

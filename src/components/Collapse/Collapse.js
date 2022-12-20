@@ -41,11 +41,7 @@ const Collapse = ({ titleCustom, contentCustom, label, children }) => {
     <Fragment>
       <div className="collapseContainer">
         <div className="collapseBar" onClick={toggle}>
-          <h2
-            style={{ ...barTitleStyle, ...titleCustom }}
-          >
-            {label}
-          </h2>
+          <h2 style={{ ...barTitleStyle, ...titleCustom }}>{label}</h2>
           <div className="chevronIcon">
             {open ? (
               <FontAwesomeIcon icon={faChevronDown} size={chevronSize} />
@@ -63,7 +59,9 @@ const Collapse = ({ titleCustom, contentCustom, label, children }) => {
               : { height: "0px" }
           }
         >
-          <div style={{ ...content, ...contentCustom }}><p className="paragraphCollapse">{children}</p></div>
+          <div style={{ ...content, ...contentCustom }}>
+            <p className="paragraphCollapse">{children}</p>
+          </div>
         </div>
       </div>
     </Fragment>

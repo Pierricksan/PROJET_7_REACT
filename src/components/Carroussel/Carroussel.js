@@ -3,25 +3,22 @@ import { Fragment, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import SizeWindowHook from '../SizeWindowHook/SizeWindowHook.js';
+import SizeWindowHook from "../SizeWindowHook/SizeWindowHook.js";
 
 const Carroussel = ({ slides }) => {
+  const screenWidth = SizeWindowHook().width;
+  const [disableParallax, setdisableParallax] = useState(false);
 
-  const screenWidth = SizeWindowHook().width
-const [disableParallax, setdisableParallax] = useState(false);
+  useEffect(() => {
+    if (screenWidth <= 1300) {
+      setdisableParallax(true);
+    } else {
+      setdisableParallax(false);
+    }
+  }, [screenWidth]);
 
-useEffect(() => {
-  if (screenWidth <= 1300) {
-    setdisableParallax(true);
-  } else {
-    setdisableParallax(false);
-  }
-}, [screenWidth]);
-
-let chevronSize = "";
-disableParallax ? chevronSize = "lg" : chevronSize = "3x";
-
-
+  let chevronSize = "";
+  disableParallax ? (chevronSize = "xl") : (chevronSize = "3x");
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -75,7 +72,6 @@ disableParallax ? chevronSize = "lg" : chevronSize = "3x";
     setCurrentIndex(newIndex);
   };
 
-
   const lengthSlide = slides.length === 1;
 
   const oneSlide = (
@@ -103,11 +99,7 @@ disableParallax ? chevronSize = "lg" : chevronSize = "3x";
     </div>
   );
 
-  return (
-    <Fragment>
-      {lengthSlide ? oneSlide : manySlides}
-    </Fragment>
-  );
+  return <Fragment>{lengthSlide ? oneSlide : manySlides}</Fragment>;
 };
 
 export default Carroussel;

@@ -10,3 +10,18 @@
     height: 225px;
     margin: 0 auto;
 }
+
+.containerCollapseAboutUs h2, p{
+    font-size: 24px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .containerCollapseAboutUs{
+        width: 100%;
+    }
+
+    .containerCollapseAboutUs h2, p{
+        font-size: 14px;
+    }
+}

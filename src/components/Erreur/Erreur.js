@@ -1,17 +1,18 @@
 import React from 'react';
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './Erreur.module.css'
+import './Erreur.css'
+
 
 
 const Erreur = ({errorType, returnPath, returnMessage, warningMessage}) => {
     
     return (
         <Fragment>
-            <div className={styles.errorPageStyle}>
-                <h1 className={styles.errorServerMessage}>{errorType}</h1>
-                <p className={styles.warning}>{warningMessage}</p>
-                <Link className={styles.returnLinkStyle} to={returnPath}>{returnMessage}</Link>
+            <div className="errorPageStyle">
+                <h1 className="errorServerMessage">{errorType}</h1>
+                <p className="warning">{warningMessage}</p>
+                <Link className="returnLinkStyle" to={returnPath}>{returnMessage}</Link>
             </div>
                 
         </Fragment>

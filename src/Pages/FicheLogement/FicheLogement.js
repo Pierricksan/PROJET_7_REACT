@@ -27,8 +27,8 @@ const FicheLogement = () => {
   });
 
   const fontContent = {
-    paddingTop: "30px",
-    paddingBottom: "30px",
+    paddingTop: "20px",
+    paddingBottom: "20px",
     textDecoration: "none",
   };
 
