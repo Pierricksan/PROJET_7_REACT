@@ -1,36 +1,44 @@
 import React from "react";
+
+//import des modules
 import { Fragment, useState, useEffect } from "react";
+//import des components nécessaires
 import Banner from "../../components/Banner/Banner";
 import Collapse from "../../components/Collapse/Collapse";
 import SizeWindowHook from "../../components/SizeWindowHook/SizeWindowHook";
 import imageAboutUsDesktop from "../../images/ImagesComponents/BannerAboutUsDesktop.png";
 import imageAboutUsMobile from "../../images/ImagesComponents/BannerAboutUsMobile.png";
-
+//import du css
 import "./Propos.css";
 
 const Propos = () => {
+
+  //Import du screenSize pour évaluer la taille de l'écran et changer l'image de la banner
   const screenWidth = SizeWindowHook().width;
-  const [disableParallax, setdisableParallax] = useState(false);
+  const [modificationSize, setModificationSize] = useState(false);
 
   useEffect(() => {
-    if (screenWidth <= 1300) {
-      setdisableParallax(true);
+    if (screenWidth <= 768) {
+      setModificationSize(true);
     } else {
-      setdisableParallax(false);
+      setModificationSize(false);
     }
   }, [screenWidth]);
 
+
   let bannerImageAbout = "";
-  disableParallax
+  modificationSize
     ? (bannerImageAbout = imageAboutUsMobile)
     : (bannerImageAbout = imageAboutUsDesktop);
 
   return (
     <Fragment>
       <div className="bannerAbout">
-        <Banner imageBanner={bannerImageAbout} descriptionAlt="un paysage montagneux enneigé et un beau temps avec une forêt d'arbres"/>
+        <Banner
+          imageBanner={bannerImageAbout}
+          descriptionAlt="un paysage montagneux enneigé et un beau temps avec une forêt d'arbres"
+        />
       </div>
-
       <div className="containerCollapseAboutUs">
         <Collapse label="Fiabilité">
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les
