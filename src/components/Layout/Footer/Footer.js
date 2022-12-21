@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
+// import css
 import "./Footer.css";
 
-const whiteColor = "#FFF";
-const widthFooterLogo = "140";
-const heightFooterLogo = "40";
-
 const Footer = () => {
+  const whiteColor = "#FFF";
+  const widthFooterLogo = "140";
+  const heightFooterLogo = "40";
+
   return (
     <Fragment>
       <footer className="mainFooter">

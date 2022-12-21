@@ -1,11 +1,15 @@
 import { useState, useRef, Fragment, useEffect } from "react";
+// import css
 import "./Collapse.css";
+// import module 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+// import component 
 import SizeWindowHook from "../SizeWindowHook/SizeWindowHook.js";
 
 const Collapse = ({ titleCustom, contentCustom, label, children }) => {
+  // construction du hook d'état pour l'ouverture et fermeture du collapse
   const [open, setOpen] = useState(false);
   const contentRef = useRef();
   const toggle = () => {
@@ -14,18 +18,18 @@ const Collapse = ({ titleCustom, contentCustom, label, children }) => {
 
   // import du windowsSize pour connaitre la taille de l'écran et changer la taille des étoiles
   const screenWidth = SizeWindowHook().width;
-  const [disableParallax, setdisableParallax] = useState(false);
+  const [modificationSize, setModificationSize] = useState(false);
 
   useEffect(() => {
     if (screenWidth <= 1300) {
-      setdisableParallax(true);
+      setModificationSize(true);
     } else {
-      setdisableParallax(false);
+      setModificationSize(false);
     }
   }, [screenWidth]);
 
   let chevronSize = "";
-  disableParallax ? (chevronSize = "sm") : (chevronSize = "lg");
+  modificationSize ? (chevronSize = "sm") : (chevronSize = "lg");
 
   const barTitleStyle = {
     textAlign: "center",

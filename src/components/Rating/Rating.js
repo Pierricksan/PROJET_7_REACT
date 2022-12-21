@@ -1,25 +1,22 @@
 import "./Rating.css";
 import { Fragment, useState, useEffect } from "react";
-import SizeWindowHook from '../SizeWindowHook/SizeWindowHook.js';
-
+import SizeWindowHook from "../SizeWindowHook/SizeWindowHook.js";
 
 const Rating = ({ stars }) => {
-
   // import du windowsSize pour connaitre la taille de l'écran et changer la taille des étoiles
-const screenWidth = SizeWindowHook().width
-const [disableParallax, setdisableParallax] = useState(false);
+  const screenWidth = SizeWindowHook().width;
+  const [modificationSize, setModificationSize] = useState(false);
 
-useEffect(() => {
-  if (screenWidth <= 768) {
-    setdisableParallax(true);
-  } else {
-    setdisableParallax(false);
-  }
-}, [screenWidth]);
-
-let starSize = "";
-disableParallax ? starSize = "15" : starSize = "30";
-
+  useEffect(() => {
+    if (screenWidth <= 768) {
+      setModificationSize(true);
+    } else {
+      setModificationSize(false);
+    }
+  }, [screenWidth]);
+// choix de la taille des étoiles si en dessous de 768px alors 15px si au dessous alors 30px
+  let starSize = "";
+  modificationSize ? (starSize = "15") : (starSize = "30");
 
   const svgStarFull = (
     <svg
@@ -50,24 +47,15 @@ disableParallax ? starSize = "15" : starSize = "30";
     </svg>
   );
 
-const ratingStar = Array.from({length:5}, (element, index) => {
-
+  const ratingStar = Array.from({ length: 5 }, (element, index) => {
     return (
-        <span className="starStyle" key={index}>
-{ stars >= index +1 
-    ? svgStarFull 
-    : svgEmptyStar
-}
-        </span>
-    )
+      <span className="starStyle" key={index}>
+        {stars >= index + 1 ? svgStarFull : svgEmptyStar}
+      </span>
+    );
+  });
 
-})
-
-  return (
-    <Fragment>
-  {ratingStar}
-    </Fragment>
-  );
+  return <Fragment>{ratingStar}</Fragment>;
 };
 
 export default Rating;

@@ -1,5 +1,7 @@
 import React from "react";
+//import css
 import "./Banner.css";
+// import module
 import { Fragment } from "react";
 
 const Banner = ({ children, imageBanner, descriptionAlt }) => {
@@ -14,6 +16,7 @@ const Banner = ({ children, imageBanner, descriptionAlt }) => {
     position: "relative",
   };
 
+  // variable pour importer le props image qui sera affiché via le component
   const bannerImage = {
     width: "100%",
     height: "100%",

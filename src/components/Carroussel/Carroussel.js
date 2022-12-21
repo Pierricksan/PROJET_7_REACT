@@ -7,18 +7,18 @@ import SizeWindowHook from "../SizeWindowHook/SizeWindowHook.js";
 
 const Carroussel = ({ slides }) => {
   const screenWidth = SizeWindowHook().width;
-  const [disableParallax, setdisableParallax] = useState(false);
+  const [modificationSize, setModificationSize] = useState(false);
 
   useEffect(() => {
     if (screenWidth <= 1300) {
-      setdisableParallax(true);
+      setModificationSize(true);
     } else {
-      setdisableParallax(false);
+      setModificationSize(false);
     }
   }, [screenWidth]);
 
   let chevronSize = "";
-  disableParallax ? (chevronSize = "xl") : (chevronSize = "3x");
+  modificationSize ? (chevronSize = "xl") : (chevronSize = "3x");
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
