@@ -1,6 +1,8 @@
 import "./Tag.css";
 import { Fragment } from "react";
 
+
+// component Tag pour afficher les particularités/étiquettes d'une entitée spécifique
 const Tag = ({ children }) => {
   return (
     <Fragment>

@@ -1,8 +1,9 @@
-import "./Title.css";
 import { Fragment } from "react";
+//import CSS
+import "./Title.css";
 
+// construction du component titre avec un titre principal et un second plus descriptif
 const Title = ({ mainTitle, secondaryTitle }) => {
- 
   return (
     <Fragment>
       <h1 className="mainTitleStyle">{mainTitle}</h1>
