@@ -50,17 +50,24 @@
   margin-left: 50px;
 }
 
-.containerEquipement li {
-  list-style: none;
+.containerDescription h2 {
+  font-size: 18px;
 }
 
-.containerDescription h2 {
+.containerDescription p {
   font-size: 18px;
 }
 
 .containerEquipement h2 {
   font-size: 18px;
 }
+
+.containerEquipement li {
+  list-style: none;
+  font-size: 18px;
+}
+
+
 
 @media only screen and (max-width: 992px) {
   .containerInformations {

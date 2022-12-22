@@ -1,7 +1,7 @@
 // Import modules
 import { Routes, Route } from "react-router-dom";
 import { Fragment } from "react";
-//CSS import 
+//CSS import
 import "./App.css";
 //PAGES IMPORT
 import Home from "./Pages/Home/Home";
@@ -14,11 +14,9 @@ import Footer from "./components/Layout/Footer/Footer";
 // ASSET IMPORT
 import LOGO from "./images/ImagesLayout/LOGO.svg";
 
-
 function App() {
-
-// route react pour les différentes pages de l'application web
-// constitué en plus d'un menu et d'un footer affiché sur toutes les pages  
+  // route react pour les différentes pages de l'application web
+  // constitué en plus d'un menu et d'un footer affiché sur toutes les pages
   return (
     <Fragment>
       <div className="pageContainer">
