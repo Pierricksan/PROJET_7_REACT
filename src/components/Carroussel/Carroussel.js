@@ -21,7 +21,7 @@ const Carroussel = ({ slides }) => {
   modificationSize ? (chevronSize = "xl") : (chevronSize = "3x");
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  
   const ContainerStyle = {
     width: "100%",
     height: "100%",

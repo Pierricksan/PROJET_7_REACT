@@ -30,14 +30,12 @@ const FicheLogement = () => {
       navigate("/erreur");
     }
   });
-
   // const de style pour personnaliser le collapse
   const fontContent = {
     paddingTop: "20px",
     paddingBottom: "20px",
     textDecoration: "none",
   };
-
   // condition pour afficher la page si l'ID est bien retrouvé dans la base de données
   if (idLogement !== undefined) {
     return (
