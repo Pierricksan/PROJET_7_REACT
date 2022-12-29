@@ -25,6 +25,13 @@
     display: none;
 }
 
+
+@media only screen and (max-width: 1300px){
+    .singleThumb{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 992px) {
     .containerHomeLocations{
         background-color: white;
@@ -41,7 +48,6 @@
     height: 115px;
 }
    .flexHome{
-    width: 90%;
     margin: 0 auto;
    }
 

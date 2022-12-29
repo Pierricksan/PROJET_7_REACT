@@ -46,7 +46,7 @@ const Home = () => {
         <div className="containerHomeLocations">
           {data.map(({ id, title, cover }, index) => {
             return (
-              <Link key={index} to={`/logement/${id}`}>
+              <Link className="singleThumb" key={index} to={`/logement/${id}`}>
                 <Thumb sourceImg={cover}>{title}</Thumb>
               </Link>
             );
