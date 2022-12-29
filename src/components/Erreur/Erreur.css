@@ -28,10 +28,6 @@
 
 @media only screen and (max-width: 768px) {
 
-    .errorPageStyle{
-        
-    }
-
     .errorServerMessage{
         font-size: 96px;
         margin: 100px 0px 0px;

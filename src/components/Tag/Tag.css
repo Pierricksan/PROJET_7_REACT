@@ -9,7 +9,7 @@
     align-items: center;
     margin-right: 15px;
     margin-top: 15px;
-    padding: 15px 0px;
+    padding: 20px 0px;
 }
 
 .containerTag p{
@@ -22,6 +22,7 @@
     .containerTag{
         width: 84px;
         height: 18px;
+        padding: 15px 0px;
     }
     .containerTag p{
         font-size: 10px;

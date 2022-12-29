@@ -10,15 +10,6 @@
   overflow: hidden;
 }
 
-/* .contentThumb img{
-  object-fit: cover;
-  width: 320%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
-} */
-
 .titleLocation {
   position: absolute;
   bottom: 20px;

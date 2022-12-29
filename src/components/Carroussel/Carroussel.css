@@ -1,15 +1,43 @@
-.numberSlides{
-    position: absolute;
-    bottom: 10px;
-    left: 49%;
-    color: #fff;
-    font-size: 18px;
-    visibility: visible
+.ContainerStyle {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
 
+.sliderStyles {
+  height: 100%;
+  position: relative;
+}
+
+.leftArrowStyle {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.rightArrowStyle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.numberSlides {
+  position: absolute;
+  bottom: 10px;
+  left: 49%;
+  color: #fff;
+  font-size: 18px;
+  visibility: visible;
+}
 
 @media only screen and (max-width: 768px) {
-    .numberSlides {
-        visibility: hidden;
-    }
+  .numberSlides {
+    visibility: hidden;
+  }
 }

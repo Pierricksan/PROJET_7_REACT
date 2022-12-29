@@ -21,7 +21,7 @@ const Collapse = ({ titleCustom, contentCustom, label, children }) => {
   const [modificationSize, setModificationSize] = useState(false);
 
   useEffect(() => {
-    if (screenWidth <= 1300) {
+    if (screenWidth <= 768) {
       setModificationSize(true);
     } else {
       setModificationSize(false);
