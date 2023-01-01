@@ -7,6 +7,17 @@
     width: 100%;
   }
 
+.containerBanner{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+.bannerImageContainer{
+    height: 100%;
+    position: relative;
+  }
+
 .textBanner{
     font-weight: 500;   
     margin: 0;

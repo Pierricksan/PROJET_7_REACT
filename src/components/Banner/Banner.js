@@ -5,16 +5,6 @@ import "./Banner.css";
 import { Fragment } from "react";
 
 const Banner = ({ children, imageBanner, descriptionAlt }) => {
-  const containerBanner = {
-    width: "100%",
-    height: "100%",
-    margin: "0 auto",
-  };
-
-  const bannerImageContainer = {
-    height: "100%",
-    position: "relative",
-  };
 
   // variable pour importer le props image qui sera affiché via le component
   const bannerImage = {
@@ -30,8 +20,8 @@ const Banner = ({ children, imageBanner, descriptionAlt }) => {
 
   return (
     <Fragment>
-      <div style={containerBanner}>
-        <div style={bannerImageContainer}>
+      <div className="containerBanner">
+        <div className="bannerImageContainer">
           <div style={bannerImage} role="img" alt={descriptionAlt} />
           <div className="bannerTextContainer">
             <h1 className="textBanner">{children}</h1>

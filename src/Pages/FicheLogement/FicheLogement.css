@@ -63,7 +63,12 @@
   font-size: 18px;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 768px) {
+  .containerCarroussel {
+    width: 100%;
+    height: 225px;
+  }
+
   .containerInformations {
     flex-direction: column;
     align-items: space-between;
@@ -77,13 +82,6 @@
     flex-direction: row-reverse;
     align-items: center;
     margin-top: 20px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .containerCarroussel {
-    width: 100%;
-    height: 225px;
   }
 
   .containerCollapseLogement {
