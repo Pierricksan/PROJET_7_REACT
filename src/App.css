@@ -9,11 +9,12 @@
   font-family: "Montserrat", sans-serif;
   margin-right: auto;
   margin-left: auto;
-  width: 1280px;
+  width: 90%;
+  max-width: 1280px;
   flex: 1;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 768px) {
   .App {
     width: 90%;
   }
